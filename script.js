@@ -27,8 +27,8 @@ function sacar () {
     const saqueFinal = saldoAtual - valorSaque;
     console.log(saqueFinal)
 
-    if(saldoAtual < valorSaque){
-        alert("O saldo não pode ser menor que o valor de saque")
+    if(valorSaque > saldoAtual){
+        alert("O saque não pode ser maior que o valor de saldo")
         return;
     }
     
@@ -39,7 +39,7 @@ function sacar () {
 function juros () {
     //A cada 5s o saldo da conta vai aumentar em 10%
     setInterval(() => {
-        //Pegar o valor do deposito e atribuir na variavel saldoAtual
+        //Pegar o valor do saldo e atribuir na variavel saldoAtual
         const saldoAtual = Number(document.querySelector('#saldo').innerHTML)
         console.log(saldoAtual)
 
@@ -50,7 +50,7 @@ function juros () {
          //Substituir saldoAtual pelo saldoFinal
         document.querySelector('#saldo').innerHTML = saldoFinal.toFixed(2)
 
-    }, 5000)
+    }, 10000)
 }
 
 juros()
