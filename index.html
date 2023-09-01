@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <h2 class="title">TypeBank</h2>
+        <div class="container">
+            <div class="saldo">
+                <div>saldo</div>
+                R$ <span id="saldo">0.00</span>
+            </div>
+            <div class="valor">
+                <div>valor</div>
+                <div class="sifrao">
+                    <label for="">R$</label>
+                    <input  type="number" id="valor" value="0.00" step="0.01">
+                </div>
+            </div>
+            <div class="buttons">
+                <button id="deposito" onclick="depositar()">Depositar</button>
+                <button id="saque" onclick="sacar()">sacar</button>
+            </div>
+        </div>
+    </main>      
+    <script src="script.js"></script>
+</body>
+</html>
